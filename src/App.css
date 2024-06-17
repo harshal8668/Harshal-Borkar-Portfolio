@@ -28,11 +28,129 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
+
+.outerContainer{
+  display: grid;
+  margin-top:5%;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  column-gap: 25px;
+  justify-self: center;
+  align-self: center;
+  margin-inline: 10px;
+  
+}
+
+.profileCard{
+  width: 300px;
+  background-color: rgb(250, 250, 250);
+  margin: 0 auto;
+  border-radius: 10px;
+  height: max-content;
+
+}
+
+.innerProfileContainer{
+  position: relative;
+  top: -50px;
+  text-align: center;
+
+}
+.profileImg{
+  margin-inline: 50px;
+  background-color: rgb(60, 60, 144);
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.profileIconContainer{
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: auto auto auto auto;
+  max-width: 50%;
+  margin-top: 10px;
+  
+}
+
+.title{
+  background-color: rgb(174, 168, 168);
+  padding-block: 5px;
+  padding-inline: 15px;
+  max-width: fit-content;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+.smallIcon{
+  width: 30px;
+  background-color: rgb(223, 221, 225);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.infoTable{
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin-inline: auto;
+  margin-top: 10px;
+  text-align: left;
+  border-spacing: 50px;
+}
+
+.mediumIcon{
+  width: 40px;
+}
+tr > * + * {
+  padding-left: 10px;
+}
+
+.profileCard-Left{
+  /* margin-left:10px; */
+}
+
+main{
+  background-color: aliceblue;
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+
+}
+
+nav{
+  height: max-content;
+  width: max-content;
+  background-color: #ffffff;
+  padding: 5px 5px;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.navbarIcon{
+  width: 30px;
+  
+}
+.navItem{
+  background-color: #c9dbff;
+  width: fit-content;
+  border: 1px solid rgb(142, 143, 145);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+.navItem:nth-child(8){
+  margin-bottom: 20px;
+}
+
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+
+

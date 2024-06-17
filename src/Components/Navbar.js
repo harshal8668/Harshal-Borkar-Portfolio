@@ -1,69 +1,73 @@
 import React from "react";
+import Icon from "./Icon";
+import profile from '../Images/profile.png'
+import experience from '../Images/experience.png'
+import education from '../Images/education.png'
+import skills from '../Images/skill.png'
+import projects from '../Images/projects.png'
+import certificates from '../Images/certificate.png'
+import hobbies from '../Images/hobbies.png'
+import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          Navbar
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                Link
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="/">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true">
-                Disabled
-              </a>
-            </li>
-          </ul>
+    <nav className={props.visible}>
+      <Link to='/about' >     
+        <div className="navItem">
+          <Icon iconImg={profile} iconAlt="Extra curricular" className="navbarIcon"></Icon>
+          {/* <p style={{fontSize:'12px',color:'black',textDecoration:'none'}}>About</p> */}
+        </div> 
+      </Link>
+
+      <Link to='/experience'>
+        <div className="navItem">
+          <Icon iconImg={experience} iconAlt="Experience" className="navbarIcon"></Icon>
+          {/* <p style={{fontSize:'12px',color:'black',textDecoration:'none'}}>Experience</p> */}
         </div>
-      </div>
+      </Link>
+        
+      <Link to='/education'> 
+        <div className="navItem">
+          <Icon iconImg={education} iconAlt="Education" className="navbarIcon"></Icon>
+          {/* <p style={{fontSize:'12px',color:'black',textDecoration:'none'}}>Education</p> */}
+        </div>     
+      </Link>
+
+      <Link to='/skills'>      
+        <div className="navItem">
+          <Icon iconImg={skills} iconAlt="Skills" className="navbarIcon"></Icon>
+          {/* <p style={{fontSize:'12px',color:'black',textDecoration:'none'}}>Skills</p> */}
+        </div>
+      </Link>
+
+      <Link to='/projects'> 
+        <div className="navItem">
+          <Icon iconImg={projects} iconAlt="Projects" className="navbarIcon"></Icon>
+          {/* <p style={{fontSize:'12px',color:'black',textDecoration:'none'}}>Projects</p> */}
+        </div>     
+      </Link>
+
+      <Link to='/'>    
+        <div className="navItem">
+          <Icon iconImg={certificates} iconAlt="Certificates" className="navbarIcon"></Icon>
+          {/* <p style={{fontSize:'12px',color:'black',textDecoration:'none'}}>Certificates</p> */}
+        </div>  
+      </Link>
+
+      <Link to='/extracurricular'>     
+        <div className="navItem">
+          <Icon iconImg={certificates} iconAlt="ExtraCurricular" className="navbarIcon"></Icon>
+          {/* <p style={{fontSize:'12px',color:'black',textDecoration:'none'}}>ExtraCurricular</p> */}
+        </div> 
+      </Link>
+     
+      <Link to='/hobbies'>     
+        <div className="navItem">
+          <Icon iconImg={hobbies} iconAlt="Hobbies" className="navbarIcon"></Icon>
+          {/* <p style={{fontSize:'12px',color:'black',textDecoration:'none'}}>Hobbies</p> */}
+        </div> 
+      </Link>
+      
     </nav>
   );
 }

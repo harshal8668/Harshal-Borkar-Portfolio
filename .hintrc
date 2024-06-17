@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "apple-touch-icons": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "meta[name=theme-color]"
+        ]
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "margin-inline",
+          "width: fit-content",
+          "max-width: fit-content",
+          "padding-block",
+          "padding-inline"
+        ]
+      }
+    ]
+  }
+}
